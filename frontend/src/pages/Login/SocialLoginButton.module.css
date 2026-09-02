@@ -1,0 +1,13 @@
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  height: 2.75rem;
+}
+
+.googleIcon {
+  flex-shrink: 0;
+}

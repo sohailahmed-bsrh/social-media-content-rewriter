@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.toneCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.toneCard:hover {
+  border-color: var(--color-primary-accent);
+  background-color: var(--color-surface-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.toneCard.selected {
+  border-color: var(--color-primary);
+  background-color: rgba(99, 102, 241, 0.05);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  color: var(--color-text-secondary);
+  transition: all 0.2s ease;
+}
+
+.toneCard.selected .iconWrapper {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.toneInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.toneName {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 0.9375rem;
+}
+
+.toneDesc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.selectedIndicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-primary);
+}

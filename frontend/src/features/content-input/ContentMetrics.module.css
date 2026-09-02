@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.25rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.metric {
+  font-variant-numeric: tabular-nums;
+  transition: color var(--transition-fast);
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+.warning {
+  color: #f59e0b; /* Amber */
+}
+
+.error {
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

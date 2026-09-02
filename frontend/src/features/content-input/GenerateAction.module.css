@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.generateBtn {
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px; /* Pill shape for primary CTA */
+  min-width: 200px;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  
+  .generateBtn {
+    width: 100%;
+  }
+}

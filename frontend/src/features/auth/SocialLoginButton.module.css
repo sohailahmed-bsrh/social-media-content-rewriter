@@ -1,0 +1,23 @@
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  height: 2.75rem;
+  transition: all var(--transition-fast);
+}
+
+.socialBtn:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+}
+
+.socialBtn:active {
+  transform: scale(0.98);
+}
+
+.googleIcon {
+  flex-shrink: 0;
+}

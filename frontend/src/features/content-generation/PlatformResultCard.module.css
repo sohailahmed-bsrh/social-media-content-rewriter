@@ -1,0 +1,169 @@
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out forwards;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.platformInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platformName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.statusBadge {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.statusGenerating {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--color-text-secondary);
+}
+
+.statusSuccess {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--color-success);
+}
+
+.statusError {
+  color: var(--color-error);
+}
+
+.contentArea {
+  padding: 1.5rem;
+  min-height: 120px;
+}
+
+.textContent {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.skeletonArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0.5;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.skeletonLine {
+  height: 1rem;
+  background-color: var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.primaryActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+@media (max-width: 600px) {
+  .actionBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .primaryActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryActions > * {
+    width: 100%;
+  }
+  
+  .secondaryActions {
+    width: 100%;
+    display: flex;
+  }
+  
+  .secondaryActions > * {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .textContent, .spin, .skeletonArea {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}

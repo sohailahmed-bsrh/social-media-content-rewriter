@@ -1,0 +1,100 @@
+.container {
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.container.focused {
+  border-color: var(--color-primary-accent);
+  box-shadow: 0 0 0 1px var(--color-primary-accent), var(--shadow-md);
+  background-color: var(--color-background);
+}
+
+.container.error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 1px var(--color-error), var(--shadow-md);
+}
+
+.editorWrapper {
+  position: relative;
+  min-height: 400px;
+}
+
+.emptyState {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.emptyIcon {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyText {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.emptyHint {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 400px;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  resize: none;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .textarea {
+    padding: 1.25rem;
+    font-size: 1rem;
+    min-height: 300px;
+  }
+  
+  .editorWrapper {
+    min-height: 300px;
+  }
+}

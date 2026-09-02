@@ -1,0 +1,184 @@
+.pageContainer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 60vh;
+  background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.15) 0%, rgba(5, 5, 8, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.introSection {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: slideDownFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pageTitle {
+  font-family: var(--font-family-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #fff, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+}
+
+.pageSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.platformCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  outline: none;
+}
+
+.platformCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(30, 30, 45, 0.6);
+}
+
+.platformCard.selected {
+  border-color: var(--color-primary-accent);
+  background: rgba(139, 92, 246, 0.05);
+  box-shadow: 0 0 0 2px var(--color-primary-accent), 0 15px 30px rgba(139, 92, 246, 0.15);
+  transform: translateY(-8px);
+}
+
+.platformCard:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary-accent);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.platformCard.selected .iconWrapper {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.xIcon {
+  color: var(--color-text-primary);
+}
+
+.linkedinIcon {
+  color: #3b82f6; 
+}
+
+.emailIcon {
+  color: var(--color-primary-accent);
+}
+
+.platformName {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.platformDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.actionArea {
+  display: flex;
+  justify-content: center;
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  opacity: 0;
+}
+
+.continueBtn {
+  min-width: 240px;
+  height: 4rem;
+  border-radius: var(--radius-full);
+  font-size: 1.125rem;
+}
+
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+}
