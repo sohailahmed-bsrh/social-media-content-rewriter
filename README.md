@@ -12,7 +12,7 @@
 
 Repurposing technical articles into punchy LinkedIn posts, concise tweets, and newsletter summaries is tedious and inconsistent.
 
-This project provides an end-to-end, reproducible implementation engineered to solve this challenge through verified data transformations, robust algorithms, and production-ready architecture.
+This project provides an end-to-end, reproducible implementation engineered to solve this challenge through verified data transformations, reliable algorithms, and production-ready architecture.
 
 ---
 
