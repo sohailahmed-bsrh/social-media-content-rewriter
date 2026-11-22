@@ -1,95 +1,87 @@
-# Social Media Content Transformation Engine
+<div align="center">
 
-> Natural language rewriting architecture adapting long-form articles into platform-optimized social posts.
+<h1>Social Media Content Optimization & Rewriter</h1>
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/sohailahmed-bsrh/social-media-content-rewriter)
-[![Live Showcase](https://img.shields.io/badge/Live-Showcase-0A66C2?style=flat-square&logo=googlechrome)](https://sohail.devsil.com/projects.html)
-[![Author](https://img.shields.io/badge/Author-Sohail%20Ahmed-20BEFF?style=flat-square)](https://sohail.devsil.com)
+<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=800&lines=Automated+Channel-Specific+Content+Rewriting;Tone+Adjustment+%26+Engagement+Optimization;Multilingual+NLP+Translation+Pipelines;React+%2B+Node.js+Full-Stack+Architecture" alt="Typing Header" />
 
----
+<p><strong>Channel-Specific Natural Language Processing Pipeline for Cross-Platform Social Publishing</strong></p>
 
-## Overview
+<p>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs,express,react,ts,tailwind,github&theme=dark" alt="Skills" /></a>
+</p>
 
-Repurposing technical articles into punchy LinkedIn posts, concise tweets, and newsletter summaries is tedious and inconsistent.
-
-This project provides an end-to-end, reproducible implementation engineered to solve this challenge through verified data transformations, reliable algorithms, and production-ready architecture.
+</div>
 
 ---
 
-## Key Features
+## Executive Summary
 
-- Structured multi-platform prompt architecture retaining core technical meaning while adapting tone
-- Automatic thread generation breaking long content into coherent sequential posts
-- Hashtag and hook generation tuned to algorithmic engagement criteria
-- React/Vite interactive editor with real-time character count limits
+The Social Media Content Rewriter optimizes source articles, notes, and updates into platform-tailored messages across LinkedIn, Twitter/X, Instagram, and Facebook. The system evaluates tone, keyword relevance, character limits, and hashtag placement to maximize organic engagement across social audiences.
+
+---
+
+## Application Workflow Gallery
+
+<table align="center">
+  <tr>
+    <td align="center"><b>Workspace Ingestion & Setup</b><br><sub>Source content intake and target platform selection.</sub></td>
+    <td align="center"><b>Draft Editing & Tone Configuration</b><br><sub>Tone parametrization across professional, conversational, and technical.</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/images/1-login.jpg" alt="Workspace Setup" width="460"/></td>
+    <td align="center"><img src="docs/images/2-input.jpg" alt="Content Ingestion" width="460"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Engagement Analysis & Scoring</b><br><sub>Predicted readability, sentiment metrics, and structure evaluation.</sub></td>
+    <td align="center"><b>Platform-Specific Output Matrix</b><br><sub>Simultaneous generation of formatted posts tailored for each network.</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/images/3-analysis.jpg" alt="Analysis Screen" width="460"/></td>
+    <td align="center"><img src="docs/images/4-platform.jpg" alt="Platform Matrix" width="460"/></td>
+  </tr>
+</table>
 
 ---
 
 ## System Architecture
 
 ```mermaid
-flowchart LR
-    SourceText[Long-Form Article / Technical Blog] --> Chunking[Semantic Chunking & Summary]
-    Chunking --> ToneMatrix[Platform Tone & Length Rules]
-    ToneMatrix --> TweetThread[Formatted Twitter Thread]
-    ToneMatrix --> LinkedInPost[Professional LinkedIn Draft]
-    ToneMatrix --> NewsletterSummary[Executive Newsletter Digest]
+flowchart TD
+    A[Raw Source Content / Blog Post] --> B[Text Preprocessing & Semantic Parser]
+    B --> C[Channel Strategy Engine: Twitter / LinkedIn / Instagram]
+    C --> D[Tone & Vocabulary Customizer]
+    D --> E[Hashtag Extraction & Call-To-Action Inserter]
+    E --> F[Character Constraint & Readability Validator]
+    F --> G[Multi-Platform Output Preview & Copy Interface]
 ```
 
 ---
 
 ## Technology Stack
 
-| Technology | Version / Spec | Role in Architecture |
-| :--- | :--- | :--- |
-| **React & Vite** | `18.2+` | Modern content drafting interface with live preview |
-| **Node.js & Express** | `18+` | Text processing API and LLM connectors |
-| **Tailwind CSS** | `3.3+` | Clean editorial layout |
+| Layer | Technologies |
+| :--- | :--- |
+| Frontend | React, TypeScript, Tailwind CSS, Lucide Icons |
+| Backend Server | Node.js, Express, REST APIs |
+| NLP & Parsing | Natural Language Processing Libraries |
 
 ---
 
-## Repository Structure
+## Installation & Setup
 
-```text
-social-media-content-rewriter/
-|-- frontend/
-|   |-- src/
-|   `-- package.json
-|-- .env.example
-|-- .gitignore
-`-- README.md
-```
-
----
-
-## Installation and Execution
-
-### Prerequisites
-- Node.js 18+ / Python 3.10+
-- Git version control
-
-### Setup Instructions
-1. Clone the repository:
 ```bash
+# Clone the repository
 git clone https://github.com/sohailahmed-bsrh/social-media-content-rewriter.git
 cd social-media-content-rewriter
-```
 
-2. Configure environment and dependencies:
-```bash
-cd frontend && npm install
+# Install dependencies and start development server
+npm install
 npm run dev
 ```
 
 ---
 
-## Interface and Verification
-The system produces verifiable execution logs, prediction matrices, or interactive browser interfaces depending on the target mode. Verify operation by executing the commands specified above or inspecting the demonstration notebooks.
+## Author & License
 
----
-
-## Author and Contact
-Developed by **Sohail Ahmed** — Full Stack AI Engineer & Machine Learning Specialist.
-- **Portfolio:** [sohail.devsil.com](https://sohail.devsil.com)
-- **GitHub:** [@sohailahmed-bsrh](https://github.com/sohailahmed-bsrh)
-- **Email:** [sohail.bsrh@gmail.com](mailto:sohail.bsrh@gmail.com)
+- **Author**: Sohail Ahmed ([Portfolio](https://sohail.devsil.com) | [GitHub](https://github.com/sohailahmed-bsrh))
+- **License**: Distributed under the MIT License.
